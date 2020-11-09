@@ -1,0 +1,16 @@
+{
+  "name": "twine-server",
+  "version": "0.0.1",
+  "description": "Server for Twine app",
+  "main": "main.js",
+  "repository": "",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "socket.io": "~0.9.16",
+    "express": "~3.4.7",
+    "jade": "~1.1.4",
+    "consolidate": "~0.10.0",
+    "mustache": "~0.8.1"
+  }
+}
