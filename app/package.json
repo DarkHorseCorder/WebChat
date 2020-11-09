@@ -1,0 +1,13 @@
+{
+  "name": "WebChat",
+  "version": "0.1.1",
+  "author": "Derek Wheelden",
+  "description": "Node-based web chat using Express and Socket.io",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "matchdep": "~0.3.0",
+    "grunt-contrib-sass": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-jshint": "~0.8.0"
+  }
+}
