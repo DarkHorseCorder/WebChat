@@ -1,0 +1,68 @@
+.chat-container {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 8em);
+    margin: 0 auto 1em;
+    padding: 0;
+    background: white;
+    color: #444;
+    overflow-y: scroll;
+
+    img { max-width: 75%; }
+
+    strong {
+        margin-right: 1em;
+        text-transform: capitalize;
+        opacity: 0.4;
+        @include transition (opacity 0.25s);
+    }
+
+    &:hover strong {
+        opacity: 0.8;
+    }
+
+    div {
+        position: relative;
+        padding: 0.5em 5em 0.5em 2em;
+        background: inherit;
+        white-space: pre-wrap;
+    }
+
+    div:nth-child(odd) {
+        background: #fafafa;
+    }
+
+    time {
+        position: absolute;
+        right: 2em;
+        opacity: 0.5;
+        color: $primary;
+        @include transition (opacity 0.25s);
+    }
+
+    &:hover time {
+        opacity: 1;
+    }
+
+    span.emote {
+        display: inline-block;
+        padding: 0 1em;
+        font-weight: bold;
+        color: $primary;
+
+        @include transform (rotateZ(100deg));
+        @include transform-origin (center center);
+        @include animation (wiggle 0.75s infinite);
+
+        -webkit-backface-visibility: hidden;
+    }
+}
+
+@include keyframes(wiggle) {
+  0% {
+    @include transform(rotateZ(100deg));
+  }
+  50% {
+    @include transform(rotateZ(80deg));
+  }
+}

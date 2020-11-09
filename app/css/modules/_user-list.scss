@@ -1,0 +1,58 @@
+.users-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20em;
+    height: 100%;
+    padding: 2em;
+    background: desaturate(darken($primary, 15%), 40%);
+
+    > i {
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+    }
+
+    @include bp(medium) {
+        position: absolute;
+        top: 0;
+        left: -webkit-calc(100% - 2em);
+        left: calc(100% - 2em);
+        width: 15em;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+
+        @include transition-property(transform);
+        @include transition-duration(0.25s);
+
+        &:hover {
+            @include transform (translateX(-webkit-calc(-100% + 2em)));
+        }
+    }
+}
+
+.users {
+    line-height: 1;
+
+    > div {
+        margin-bottom: 1em;
+    }
+
+    > div.current-user {
+        color: $secondary;
+    }
+
+    i.typing {
+        padding: 0 1em;
+        color: white;
+        visibility: hidden;
+
+        &.isTyping { visibility: visible; }
+    }
+
+    small {
+        font-size: 0.6em;
+        line-height: 1;
+        opacity: 0.5;
+    }
+}
